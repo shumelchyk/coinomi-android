@@ -1,4 +1,8 @@
-apply plugin: 'java'
+allprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+}
 
 configurations {
     unitTestCompile.extendsFrom runtime
@@ -35,11 +39,11 @@ sourceSets {
 }
 
 // add the unitTest task
-task unitTest(type:Test, dependsOn: assemble) {
-    description = "run unit tests"
-    testClassesDir = project.sourceSets.unitTest.output.classesDir
-    classpath = project.sourceSets.unitTest.runtimeClasspath
-}
-
-// bind to check
-check.dependsOn unitTest
+//task unitTest(type:Test, dependsOn: assemble) {
+//    description = "run unit tests"
+//    testClassesDir = project.sourceSets.unitTest.output.classesDir
+//    classpath = project.sourceSets.unitTest.runtimeClasspath
+//}
+//
+//// bind to check
+//check.dependsOn unitTest
