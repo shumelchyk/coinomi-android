@@ -3,7 +3,6 @@ package com.coinomi.wallet.ui;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coinomi.core.coins.CoinType;
-import com.coinomi.core.coins.PeercoinMain;
 import com.coinomi.core.coins.Value;
 import com.coinomi.core.exchange.shapeshift.ShapeShift;
 import com.coinomi.core.exchange.shapeshift.data.ShapeShiftCoins;
@@ -299,9 +297,9 @@ public class TradeSelectFragment extends Fragment implements ExchangeCheckSuppor
             case R.id.action_swap_coins:
                 swapAccounts();
                 return true;
-            case R.id.action_exchange_history:
-                startActivity(new Intent(getActivity(), ExchangeHistoryActivity.class));
-                return true;
+//            case R.id.action_exchange_history:
+//                startActivity(new Intent(getActivity(), ExchangeHistoryActivity.class));
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

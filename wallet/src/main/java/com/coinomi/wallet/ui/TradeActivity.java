@@ -9,13 +9,14 @@ import com.coinomi.core.wallet.WalletAccount;
 import com.coinomi.wallet.Constants;
 import com.coinomi.wallet.ExchangeHistoryProvider.ExchangeEntry;
 import com.coinomi.wallet.R;
-import com.coinomi.wallet.tasks.AddCoinTask;
 import com.coinomi.wallet.ui.dialogs.ConfirmAddCoinUnlockWalletDialog;
 
 import org.bitcoinj.crypto.KeyCrypterException;
 
 import javax.annotation.Nullable;
 
+
+// TODO: REMOVE
 
 public class TradeActivity extends BaseWalletActivity implements
         TradeSelectFragment.Listener, MakeTransactionFragment.Listener, TradeStatusFragment.Listener,

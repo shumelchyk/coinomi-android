@@ -7,6 +7,8 @@ import com.coinomi.wallet.R;
 /**
  * @author John L. Jegutanis
  */
+// TODO: REMOVE
+
 public class ExchangeHistoryActivity extends BaseWalletActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

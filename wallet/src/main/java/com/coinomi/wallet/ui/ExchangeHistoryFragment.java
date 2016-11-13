@@ -1,7 +1,6 @@
 package com.coinomi.wallet.ui;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ import android.widget.TextView;
 
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.wallet.Configuration;
-import com.coinomi.wallet.Constants;
 import com.coinomi.wallet.ExchangeHistoryProvider;
 import com.coinomi.wallet.ExchangeHistoryProvider.ExchangeEntry;
 import com.coinomi.wallet.R;
@@ -36,6 +34,8 @@ import javax.annotation.CheckForNull;
 /**
  * @author John L. Jegutanis
  */
+
+// TODO: REMOVE
 public final class ExchangeHistoryFragment extends ListFragment {
     private Context activity;
     private WalletApplication application;
@@ -98,11 +98,11 @@ public final class ExchangeHistoryFragment extends ListFragment {
 
     @Override
     public void onListItemClick(final ListView l, final View v, final int position, final long id) {
-        final Cursor cursor = (Cursor) adapter.getItem(position);
-        final ExchangeEntry entry = ExchangeHistoryProvider.getExchangeEntry(cursor);
-        Intent intent = new Intent(getActivity(), TradeStatusActivity.class);
-        intent.putExtra(Constants.ARG_EXCHANGE_ENTRY, entry);
-        startActivity(intent);
+//        final Cursor cursor = (Cursor) adapter.getItem(position);
+//        final ExchangeEntry entry = ExchangeHistoryProvider.getExchangeEntry(cursor);
+//        Intent intent = new Intent(getActivity(), TradeStatusActivity.class);
+//        intent.putExtra(Constants.ARG_EXCHANGE_ENTRY, entry);
+//        startActivity(intent);
     }
 
     private final LoaderCallbacks<Cursor> exchangesLoaderCallbacks = new LoaderCallbacks<Cursor>() {

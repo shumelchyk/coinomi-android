@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.coinomi.core.coins.AuroracoinMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.Value;
 import com.coinomi.wallet.Configuration;
@@ -30,7 +31,8 @@ public class FeesListAdapter extends BaseAdapter {
 
     public void update() {
         fees.clear();
-        fees.addAll(config.getFeeValues().values());
+        fees.add(config.getFeeValue(AuroracoinMain.get()));
+        //fees.addAll(config.getFeeValues().values());
         notifyDataSetChanged();
     }
 

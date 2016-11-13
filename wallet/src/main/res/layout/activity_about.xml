@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingStart="@dimen/activity_horizontal_margin"
@@ -17,16 +17,18 @@
         android:paddingEnd="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/coinomi_logo_gradient"
+                android:src="@drawable/auroracoin"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
@@ -36,8 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/app_name_long"
                 android:id="@+id/textView"
-                android:layout_marginTop="172dp"
-                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/standard_margin"
                 android:layout_centerHorizontal="true" />
 
             <TextView
@@ -46,11 +47,14 @@
                 android:layout_height="wrap_content"
                 style="@style/NormalText"
                 tools:text="X.Y.Z"
-                android:layout_below="@+id/textView"
-                android:layout_alignLeft="@+id/textView"
-                android:layout_alignStart="@+id/textView" />
-        </RelativeLayout>
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom">
         <Button
             android:id="@+id/terms_of_service_button"
             style="@style/BorderlessButtonLink"
@@ -69,107 +73,107 @@
             <!--android:layout_gravity="center"-->
             <!--android:text="@string/coinomi_website" />-->
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingTop="@dimen/activity_vertical_margin">
-            <TextView
-                android:id="@+id/translation_globe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/NormalText"
-                android:paddingRight="8dp"
-                android:paddingEnd="8dp"
-                android:text="@string/font_icon_language"
-                tools:text="A#"/>
+        <!--<LinearLayout-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingTop="@dimen/activity_vertical_margin">-->
+            <!--<TextView-->
+                <!--android:id="@+id/translation_globe"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/NormalText"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:paddingEnd="8dp"-->
+                <!--android:text="@string/font_icon_language"-->
+                <!--tools:text="A#"/>-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/NormalText"
-                android:text="@string/about_credits_translations" />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/NormalText"-->
+                <!--android:text="@string/about_credits_translations" />-->
+        <!--</LinearLayout>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:text="@string/about_credits_translations_credits" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:text="@string/about_credits_translations_credits" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="14dp"
-            android:text="@string/about_licence" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="14dp"-->
+            <!--android:text="@string/about_licence" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_bitcoinj" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_bitcoinj" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_electrum" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_electrum" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_schildbach" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_schildbach" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_zxing" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_zxing" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_crypto_icons" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_crypto_icons" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_font_icons" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_font_icons" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/about_credits_exchange_rates" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--style="@style/NormalText"-->
+            <!--android:autoLink="web"-->
+            <!--android:paddingTop="16dp"-->
+            <!--android:text="@string/about_credits_exchange_rates" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/coins_network"
-            android:layout_gravity="center_horizontal" />
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="32dp"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:src="@drawable/auroracoin"-->
+            <!--android:layout_gravity="center_horizontal" />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -178,6 +182,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="16dp"
             android:text="@string/about_coinomi_copyright" />
+        </LinearLayout>>
 
     </LinearLayout>
 </ScrollView>

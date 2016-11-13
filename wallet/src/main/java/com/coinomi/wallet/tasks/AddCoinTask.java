@@ -13,18 +13,20 @@ import javax.annotation.Nullable;
 /**
  * @author John L. Jegutanis
  */
-public final class AddCoinTask  extends AsyncTask<Void, Void, Void> {
+public final class AddCoinTask extends AsyncTask<Void, Void, Void> {
     private final Listener listener;
     protected final CoinType type;
     private final Wallet wallet;
     @Nullable
     private final String description;
-    @Nullable private final CharSequence password;
+    @Nullable
+    private final CharSequence password;
     private WalletAccount newAccount;
     private Exception exception;
 
     public interface Listener {
         void onAddCoinTaskStarted();
+
         void onAddCoinTaskFinished(Exception error, WalletAccount newAccount);
     }
 

@@ -48,7 +48,6 @@ import javax.annotation.Nullable;
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_COIN;
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_OVERVIEW;
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_SECTION_TITLE;
-import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_TRADE;
 
 
 /**
@@ -217,8 +216,8 @@ final public class WalletActivity extends BaseWalletActivity implements
 
     private void createNavDrawerItems() {
         navDrawerItems.clear();
-        NavDrawerItem.addItem(navDrawerItems, ITEM_SECTION_TITLE, getString(R.string.navigation_drawer_services));
-        NavDrawerItem.addItem(navDrawerItems, ITEM_TRADE, getString(R.string.title_activity_trade), R.drawable.trade, null);
+       // NavDrawerItem.addItem(navDrawerItems, ITEM_SECTION_TITLE, getString(R.string.navigation_drawer_services));
+       // NavDrawerItem.addItem(navDrawerItems, ITEM_TRADE, getString(R.string.title_activity_trade), R.drawable.trade, null);
         NavDrawerItem.addItem(navDrawerItems, ITEM_SECTION_TITLE, getString(R.string.navigation_drawer_wallet));
         NavDrawerItem.addItem(navDrawerItems, ITEM_OVERVIEW, getString(R.string.title_activity_overview), R.drawable.ic_launcher, null);
         for (WalletAccount account : getAllAccounts()) {
@@ -280,13 +279,13 @@ final public class WalletActivity extends BaseWalletActivity implements
 
     @Override
     public void onTradeSelected() {
-        startActivity(new Intent(WalletActivity.this, TradeActivity.class));
-        // Reselect the last item as the trade is a separate activity
-        if (isOverviewVisible) {
-            navDrawerSelectOverview(true);
-        } else {
-            navDrawerSelectAccount(getAccount(lastAccountId), true);
-        }
+//        startActivity(new Intent(WalletActivity.this, TradeActivity.class));
+//        // Reselect the last item as the trade is a separate activity
+//        if (isOverviewVisible) {
+//            navDrawerSelectOverview(true);
+//        } else {
+//            navDrawerSelectAccount(getAccount(lastAccountId), true);
+//        }
     }
 
     @Override

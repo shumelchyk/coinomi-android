@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 
 import com.coinomi.wallet.R;
 
+// TODO: REMOVE
 
 public class TradeStatusActivity extends BaseWalletActivity implements TradeStatusFragment.Listener {
 

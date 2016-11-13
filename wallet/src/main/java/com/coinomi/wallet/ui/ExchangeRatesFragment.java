@@ -60,6 +60,9 @@ import javax.annotation.CheckForNull;
  * @author Andreas Schildbach
  * @author John L. Jegutanis
  */
+
+// TODO: REMOVE
+
 public final class ExchangeRatesFragment extends ListFragment implements OnSharedPreferenceChangeListener {
     private Context context;
     private WalletApplication application;

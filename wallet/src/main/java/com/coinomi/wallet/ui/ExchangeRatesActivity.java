@@ -8,6 +8,8 @@ import com.coinomi.wallet.R;
 /**
  * @author John L. Jegutanis
  */
+
+// TODO: REMOVE
 public class ExchangeRatesActivity extends BaseWalletActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {

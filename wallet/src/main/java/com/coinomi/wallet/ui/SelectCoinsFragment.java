@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.coinomi.core.coins.AuroracoinMain;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.wallet.Configuration;
 import com.coinomi.wallet.Constants;
@@ -31,6 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.coinomi.wallet.ExchangeRatesProvider.getRates;
 
@@ -78,7 +80,11 @@ public class SelectCoinsFragment extends Fragment {
             message = args.getString(Constants.ARG_MESSAGE);
         }
 
-        adapter = new CoinExchangeListAdapter(context, Constants.SUPPORTED_COINS);
+        List<CoinType> supportedCoins = new ArrayList<>();
+        supportedCoins.add(AuroracoinMain.get());
+        adapter = new CoinExchangeListAdapter(context, supportedCoins);
+
+        //adapter = new CoinExchangeListAdapter(context, Constants.SUPPORTED_COINS);
 
         String localSymbol = config.getExchangeCurrencyCode();
         adapter.setExchangeRates(getRates(getActivity(), localSymbol));
